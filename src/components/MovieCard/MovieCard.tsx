@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { MovieStructure } from "../../store/features/movieSlice/types";
 
 interface MoviesCardProps {
@@ -6,15 +5,12 @@ interface MoviesCardProps {
 }
 
 const MovieCard = ({
-  movie: { id, name, year },
+  movie: { name, year },
 }: MoviesCardProps): React.ReactElement => {
   return (
     <article>
-      <h2 className="movies">
-        <NavLink to={`/films/${id}`}>
-          {name}, {year}
-        </NavLink>
-      </h2>
+      <h2 className="movies"> {name}</h2>
+      <span>{year}</span>
     </article>
   );
 };

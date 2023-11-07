@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { MovieStructure, MoviesStateStructure } from "./types";
+import { MovieStructure, MoviesStateStructure } from "./types.ts";
 
 const initialMoviesState: MoviesStateStructure = {
   movies: [],
