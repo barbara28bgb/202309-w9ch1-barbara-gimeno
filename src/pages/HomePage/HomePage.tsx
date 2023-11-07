@@ -18,7 +18,9 @@ const HomePage = (): React.ReactElement => {
 
   return (
     <HomePageStyled className="home-page">
-      <h1 className="home-page__title">Best Movies of the last 50 years </h1>
+      <h1 className="home-page__title">
+        Mejores 5 películas de los últimos años
+      </h1>
       <main>
         <MoviesList />
       </main>
