@@ -1,5 +1,5 @@
-import { Route, Routes } from "react-router-dom";
-import HomePage from "../HomePage/HomePage";
+import { Navigate, Route, Routes } from "react-router-dom";
+import HomePage from "../../pages/HomePage/HomePage";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 
 const App = (): React.ReactElement => {
@@ -10,13 +10,10 @@ const App = (): React.ReactElement => {
   const dispatch = useAppDispatch();
 
   return (
-    <>
-      <div>
         <Routes>
           <Route path="/films" element={<HomePage />} />
+          <Route path="/" element={<Navigate to= "*home" /> }
         </Routes>
-      </div>
-    </>
   );
 };
 
