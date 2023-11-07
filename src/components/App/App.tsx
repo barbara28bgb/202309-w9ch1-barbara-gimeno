@@ -4,8 +4,8 @@ import HomePage from "../../pages/HomePage/HomePage";
 const App = (): React.ReactElement => {
   return (
     <Routes>
-      <Route path="/films" element={<HomePage />} />
       <Route path="/" element={<Navigate to="/films" />} />
+      <Route path="/films" element={<HomePage />} />
     </Routes>
   );
 };
