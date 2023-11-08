@@ -3,6 +3,7 @@ export interface MovieStructure {
   name: string;
   year: string;
   image: string;
+  isWatch: boolean;
 }
 
 export interface MoviesStateStructure {
