@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import useMoviesApi from "../../hooks/useMoviesApi";
-import { useAppDispatch } from "../../store/hooks";
 import { loadMoviesActionCreator } from "../../store/features/movieSlice/movieSlice";
 import MoviesList from "../../components/MoviesList/MoviesList";
 import HomePageStyled from "./HomePageStyled";
+import { useDispatch } from "react-redux";
 
 const HomePage = (): React.ReactElement => {
-  const dispatch = useAppDispatch();
+  const dispatch = useDispatch();
   const { getMovies } = useMoviesApi();
 
   useEffect(() => {
