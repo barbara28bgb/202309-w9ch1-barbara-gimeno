@@ -14,8 +14,8 @@ const MovieCard = ({
         className="movie-container__image"
         src={image}
         alt={name}
-        width={380}
-        height={500}
+        width={280}
+        height={380}
       />
       <h2 className="movie-container__title"> {name}</h2>
       <span className="movie-container__year">{year}</span>
