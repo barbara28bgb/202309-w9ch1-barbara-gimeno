@@ -9,7 +9,7 @@ const HomePageStyled = styled.div`
 
   .home-page {
     &__title {
-      padding: 20px 0 0 0;
+      padding: 20px 0 20px 0;
       background-color: ${({ theme }) => theme.color.mainBackground};
       font-size: 2.4rem;
       text-align: center;
