@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { EmptyMovie } from "../../store/features/movieSlice/types";
+import FormStyled from "./FromStyled";
 
 const MovieForm = () => {
   const emptyMovie: EmptyMovie = {
@@ -8,14 +10,33 @@ const MovieForm = () => {
     isWatch: false,
   };
 
+  const [newMovie, setNewMovie] = useState(emptyMovie);
+
+  const OnChangeData = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNewMovie(() => ({
+      ...newMovie,
+      [event.target.id]:
+        event.target.type === "checkbox"
+          ? event.target.checked
+          : event.target.value,
+    }));
+  };
+
   return (
     <>
-      <form className="form">
+      <FormStyled className="form">
         <div className="form">
           <label className="form__label" htmlFor="Title">
             Titulo{" "}
           </label>
-          <input className="form__input" type="text" id="title" required />
+          <input
+            className="form__input"
+            type="text"
+            id="title"
+            required
+            autoComplete="off"
+            onChange={OnChangeData}
+          />
         </div>
         <div className="form">
           <label className="form__label" htmlFor="Year">
@@ -25,8 +46,9 @@ const MovieForm = () => {
             className="form__input"
             type="text"
             id="year"
-            value={emptyMovie.year}
             required
+            autoComplete="off"
+            onChange={OnChangeData}
           />
         </div>
         <div className="form">
@@ -37,11 +59,12 @@ const MovieForm = () => {
             className="form__input"
             type="text"
             id="image"
-            value={emptyMovie.image}
             required
+            autoComplete="off"
+            onChange={OnChangeData}
           />
         </div>
-      </form>
+      </FormStyled>
     </>
   );
 };
