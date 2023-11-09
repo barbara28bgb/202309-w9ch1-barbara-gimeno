@@ -6,6 +6,7 @@ const App = (): React.ReactElement => {
     <Routes>
       <Route path="/" element={<Navigate to="/films" />} />
       <Route path="/films" element={<HomePage />} />
+      <Route path="/new-film" element={<Navigate to="/new-film" />} />
     </Routes>
   );
 };
