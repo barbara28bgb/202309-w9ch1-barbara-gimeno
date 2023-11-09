@@ -9,3 +9,10 @@ export interface MovieStructure {
 export interface MoviesStateStructure {
   movies: MovieStructure[];
 }
+
+export interface EmptyMovie {
+  name: string;
+  year: string;
+  image: string;
+  isWatch: false;
+}
