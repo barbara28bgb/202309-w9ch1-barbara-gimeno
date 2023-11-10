@@ -1,7 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  *,
+  :root{
+   font-family: ${({ theme }) => theme.typography.mainFontFamily};
+   padding: 25px;
+   margin: 20px;
+   
+
+  }
+
   ::after,
   ::before {
     box-sizing: border-box;
@@ -25,6 +32,21 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.color.mainFont};
     background-color: ${({ theme }) => theme.color.mainBackground};
   }
+  
+  form {
+   background-color: ${({ theme }) => theme.color.cardBackground};
+   font-family: ${({ theme }) => theme.typography.mainFontFamily};
+   font-size: 1rem;
+
+  }
+
+  a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+
+  }
+  
 `;
 
 export default GlobalStyle;
