@@ -23,49 +23,58 @@ const MovieForm = () => {
   };
 
   return (
-    <>
-      <FormStyled className="form">
-        <div className="form">
-          <label className="form__label" htmlFor="Title">
-            Titulo{" "}
-          </label>
+    <FormStyled className="form" autoComplete="off">
+      <div className="form">
+        <label className="form__label" htmlFor="Title">
+          Titulo{" "}
+        </label>
+        <input
+          className="form__input"
+          type="text"
+          id="name"
+          required
+          autoComplete="off"
+          onChange={OnChangeData}
+        />
+      </div>
+      <div className="form">
+        <label className="form__label" htmlFor="Year">
+          Año de estreno{" "}
+        </label>
+        <input
+          className="form__input"
+          type="text"
+          id="year"
+          required
+          autoComplete="off"
+          onChange={OnChangeData}
+        />
+      </div>
+      <div className="form">
+        <label className="form__label" htmlFor="Image">
+          Imagen{" "}
+        </label>
+        <input
+          className="form__input"
+          type="text"
+          id="image"
+          required
+          autoComplete="off"
+          onChange={OnChangeData}
+        />
+        <label className="form__box" htmlFor="isWatch">
+          Vista
           <input
-            className="form__input"
-            type="text"
-            id="title"
-            required
-            autoComplete="off"
+            className="form__box__box"
+            id="box"
+            type="checkbox"
+            name="isWatch"
+            checked={emptyMovie.isWatch}
             onChange={OnChangeData}
           />
-        </div>
-        <div className="form">
-          <label className="form__label" htmlFor="Year">
-            Año de estreno{" "}
-          </label>
-          <input
-            className="form__input"
-            type="text"
-            id="year"
-            required
-            autoComplete="off"
-            onChange={OnChangeData}
-          />
-        </div>
-        <div className="form">
-          <label className="form__label" htmlFor="Image">
-            Imagen{" "}
-          </label>
-          <input
-            className="form__input"
-            type="text"
-            id="image"
-            required
-            autoComplete="off"
-            onChange={OnChangeData}
-          />
-        </div>
-      </FormStyled>
-    </>
+        </label>
+      </div>
+    </FormStyled>
   );
 };
 
