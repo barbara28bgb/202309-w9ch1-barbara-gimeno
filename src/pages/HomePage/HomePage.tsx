@@ -22,8 +22,12 @@ const HomePage = (): React.ReactElement => {
       <h1 className="home-page__title">
         Mejores 5 películas de los últimos años
       </h1>
-      <NavLink aria-label="Añade una nueva película" to="/new-film">
-        <span>Añade una nueva película</span>
+      <NavLink
+        className="home-page__add"
+        aria-label="Añade una nueva película"
+        to="/new-film"
+      >
+        Añadir nueva pelicula
       </NavLink>
       <main>
         <MoviesList />
