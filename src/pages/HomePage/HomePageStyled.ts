@@ -14,6 +14,9 @@ const HomePageStyled = styled.div`
       font-size: 2.4rem;
       text-align: center;
     }
+    &__add {
+      padding: 25px;
+    }
   }
 `;
 
